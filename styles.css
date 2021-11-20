@@ -1,0 +1,106 @@
+.slideshow {
+    cursor: pointer;
+}
+
+.slide {
+    display: none;
+    position: relative;
+    animation: fade 0.5s;
+}
+
+
+/* for loade slides */
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide div {
+    background-color: #b4111170;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 44px;
+    transition: min-height 0.5s;
+    /* for image'stext */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide div:hover {
+    min-height: 100%;
+}
+
+.slide div:hover p {
+    font-size: 3rem;
+}
+
+.slide div p {
+    margin-bottom: 0;
+    color: #fff;
+    padding: 10px;
+    transition: font-size 0.5s;
+}
+
+
+/* narrow codes */
+
+.slides {
+    position: relative;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: #fff;
+    padding: 16px;
+    /* put narrow center for  */
+    margin-top: -32px;
+}
+
+.prev:active,
+.next:active {
+    background-color: #000;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.points {
+    margin-top: 10px;
+}
+
+.points span {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #aaa;
+    border-radius: 50%;
+}
+
+.points span.active {
+    background-color: #555;
+}
